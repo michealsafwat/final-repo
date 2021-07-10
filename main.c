@@ -11,6 +11,28 @@ struct student
     int db[3];
     int score;
 };
+
+
+// creating a structure that represents a node
+struct Node
+{
+    struct student data;
+    struct Node *next;
+};
+
+// creating and initializing head and tail pointers to Null
+struct Node *head = NULL;
+struct Node *tail = NULL;
+
+
+int xll;  // input from user to select whether to create students with random data or enter the data from keybaord
+int posll;  // holds the index to insert to
+int Nll; //Number of students in the array
+struct student *all;  // pointer to an array that holds student's data to put in nodes afterwards
+char yll;  // input from user to select where to insert
+clock_t sec;//  holds the time of execution at a certain moment
+
+
 struct student a[];
 int xarr;      // input from user to select whether to create students with random data or enter the data from keybaord
 char yarr;     // input from user to select where to insert
@@ -19,6 +41,11 @@ int Narr;          //Number of students
 clock_t ss;   //  holds the time of execution at a certain moment
 struct student *ptr, *first;
 
+void insertll();
+void insert_head();
+void insert_lastll();
+void input_datall();
+void createll();
 void insert_begin();
 void input_data();
 void insert();
@@ -172,60 +199,6 @@ void input_data()
     else if (yarr == 2)
         insert();
 }
-
-
-void menu()
-{
-    char m;
-printf("To use a linked list press 1:\n");
-printf("To use an array press 2:\n");
-
-scanf("%d", &m);
-if (m==1){
-
-    input_datall();
-    createll();
-    Display_LL(head);
-    printf("\nTime taken by the operation: %.12lf sec\n", (double)sec / CLOCKS_PER_SEC);    // calculates time in seconds
-    printf("Size taken is %ld\n",sizeof(struct student)*(Nll+1)+16+8*(Nll+1));       // calculates size taken  which is the size of each node plus head and tail pointers
-}
-else{
-
-
-
-    input_data();
-    disp(first);
-    printf("\nTime taken by the operation: %.12lf sec\n", (double)ss / CLOCKS_PER_SEC);           // calculates time of insertion in seconds
-    printf("Size taken is %ld bytes\n",sizeof(struct student)*Narr);  // calculates the size taken by the array
-}
-}
-
-int xll;  // input from user to select whether to create students with random data or enter the data from keybaord
-int posll;  // holds the index to insert to
-int Nll; //Number of students in the array
-struct student *all;  // pointer to an array that holds student's data to put in nodes afterwards
-char yll;  // input from user to select where to insert
-clock_t sec;//  holds the time of execution at a certain moment
-
-// creating a structure that represents a node
-struct Node
-{
-    struct student data;
-    struct Node *next;
-};
-
-// creating and initializing head and tail pointers to Null
-struct Node *head = NULL;
-struct Node *tail = NULL;
-
-
-
-
-void insertll();
-void insert_head();
-void insert_lastll();
-void input_datall();
-void createll();
 
 
 // function to insert a node at the first position of the LL which will now be the head node
@@ -409,9 +382,31 @@ void Display_LL(struct Node *p)
     }
 }
 
+void menu()
+{
+    char m;
+printf("To use a linked list press 1:\n");
+printf("To use an array press 2:\n");
+
+scanf("%d", &m);
+if (m==1){
+
+    input_datall();
+    createll();
+    Display_LL(head);
+    printf("\nTime taken by the operation: %.12lf sec\n", (double)sec / CLOCKS_PER_SEC);    // calculates time in seconds
+    printf("Size taken is %ld\n",sizeof(struct student)*(Nll+1)+16+8*(Nll+1));       // calculates size taken  which is the size of each node plus head and tail pointers
+}
+else{
 
 
 
+    input_data();
+    disp(first);
+    printf("\nTime taken by the operation: %.12lf sec\n", (double)ss / CLOCKS_PER_SEC);           // calculates time of insertion in seconds
+    printf("Size taken is %ld bytes\n",sizeof(struct student)*Narr);  // calculates the size taken by the array
+}
+}
 
 
 
