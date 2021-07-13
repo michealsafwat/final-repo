@@ -27,7 +27,7 @@ struct Node *tail = NULL;
 
 int xll;  // input from user to select whether to create students with random data or enter the data from keybaord
 int posll;  // holds the index to insert to
-int Nll; //Number of students in the array
+int Nll; //Number of students 
 struct student *all;  // pointer to an array that holds student's data to put in nodes afterwards
 char yll;  // input from user to select where to insert
 clock_t sec;//  holds the time of execution at a certain moment
