@@ -157,7 +157,7 @@ void input_data()
     scanf("%d", &Narr);
     ptr = (struct student *)calloc(Narr, sizeof(struct student));      //allocate N number of slots to hold students data
     first = ptr;
-    if (xll == 1)     // if the user wants to enter the students' data manually
+    if (xarr == 1)     // if the user wants to enter the students' data manually
     {
         for (int i = 0; i < Narr; i++)
         {
