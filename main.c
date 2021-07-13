@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//Team Members : Khaled Khalifa - Mostafa Gamal - Micheal Safwat
+//Team Members : Khaled Khalifa  Sec:2  BN:7  - Mostafa Gamal Sec:4 BN:14  - Micheal Safwat  Sec:4 BN:30
 
 struct student
 {
