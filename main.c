@@ -395,7 +395,7 @@ if (m==1){
     createll();
     Display_LL(head);
     printf("\nTime taken by the operation: %.12lf sec\n", (double)sec / CLOCKS_PER_SEC);    // calculates time in seconds
-    printf("Size taken is %ld\n",sizeof(struct student)*(Nll+1)+16+8*(Nll+1));       // calculates size taken  which is the size of each node plus head and tail pointers
+    printf("Size taken is %ld\n",sizeof(struct student)*(Nll+1)+8*(Nll+1));       // calculates size taken  which is the size of each node plus head and tail pointers
 }
 else{
 
